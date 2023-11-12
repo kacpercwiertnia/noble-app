@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+body{
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root, .box404{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.radio-button-group{
+  justify-content: space-around;
+  margin: 10px 0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.radio-button-group label{
+  margin: 0;
+}
+.selectedLanguage span:first-child,
+.unselectedLanguage span:first-child{
+  display: none;
+}
+.selectedLanguage span:last-child{
+  filter: grayscale(0);
+}
+.unselectedLanguage span:last-child{
+  filter: grayscale(1);
+}
+.selectedSort{
+  filter: grayscale(0);
+  cursor: pointer;
+  margin: 0px 2px;
+}
+.unselectedSort{
+  filter: grayscale(1);
+  cursor: pointer;
+  margin: 0px 2px;
+}
+.box404 .MuiButton-outlined{
+  width: 200px;
+}
+.MuiButton-contained{
+  margin-top: 15px!important;
 }
